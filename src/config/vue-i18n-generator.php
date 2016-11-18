@@ -24,5 +24,5 @@ return [
     |
     */
 
-    'jsFile' => '/resources/assets/js/vue-i18n-locales.generated.js'
+    'jsFile' => '/resources/assets/js/vue-i18n-es5-locales.generated.js'
 ];

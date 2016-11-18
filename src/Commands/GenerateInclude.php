@@ -1,8 +1,8 @@
-<?php namespace MartinLindhe\VueInternationalizationGenerator\Commands;
+<?php namespace EduardoR2K\VueInternationalizationGenerator\Commands;
 
 use Illuminate\Console\Command;
 
-use MartinLindhe\VueInternationalizationGenerator\Generator;
+use EduardoR2K\VueInternationalizationGenerator\Generator;
 
 class GenerateInclude extends Command
 {
@@ -11,7 +11,7 @@ class GenerateInclude extends Command
      *
      * @var string
      */
-    protected $signature = 'vue-i18n:generate';
+    protected $signature = 'vue-i18n-es5:generate';
 
     /**
      * The console command description.

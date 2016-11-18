@@ -1,4 +1,4 @@
-<?php namespace MartinLindhe\VueInternationalizationGenerator;
+<?php namespace EduardoR2K\VueInternationalizationGenerator;
 
 use DirectoryIterator;
 use Exception;

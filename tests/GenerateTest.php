@@ -69,7 +69,7 @@ class GenerateTest extends \PHPUnit_Framework_TestCase
         $root = $this->generateLocaleFilesFrom($arr);
 
         $this->assertEquals(
-            'export default {' . PHP_EOL
+            '{' . PHP_EOL
             . '    "en": {' . PHP_EOL
             . '        "help": {' . PHP_EOL
             . '            "yes": "yes",' . PHP_EOL
@@ -104,7 +104,7 @@ class GenerateTest extends \PHPUnit_Framework_TestCase
         $root = $this->generateLocaleFilesFrom($arr);
 
         $this->assertEquals(
-            'export default {' . PHP_EOL
+            '{' . PHP_EOL
             . '    "en": {' . PHP_EOL
             . '        "help": {' . PHP_EOL
             . '            "yes": "see {link} y {lonk}",' . PHP_EOL
@@ -133,7 +133,7 @@ class GenerateTest extends \PHPUnit_Framework_TestCase
         $root = $this->generateLocaleFilesFrom($arr);
 
         $this->assertEquals(
-            'export default {' . PHP_EOL
+            '{' . PHP_EOL
             . '    "en": {' . PHP_EOL
             . '        "help": {' . PHP_EOL
             . '            "yes": "see <a href=\"mailto:mail@com\">",' . PHP_EOL

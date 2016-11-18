@@ -28,8 +28,7 @@ class Generator
             }
         }
 
-        return 'export default '
-            . json_encode($locales, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE) . PHP_EOL;
+        return json_encode($locales, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE) . PHP_EOL;
     }
 
     /**

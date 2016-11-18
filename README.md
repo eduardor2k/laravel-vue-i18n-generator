@@ -9,18 +9,18 @@ with your [vue](http://vuejs.org/) front-end, using [vue-i18n](https://github.co
 ## Usage
 
 In your project:
-```composer require martinlindhe/laravel-vue-i18n-generator```
+```composer require eduardor2k/laravel-vue-i18n-generator```
 
 In ```config/app.php``` providers:
 
 ```php
-MartinLindhe\VueInternationalizationGenerator\GeneratorProvider::class,
+EduardoR2K\VueInternationalizationGenerator\GeneratorProvider::class,
 ```
 
 Next, publish the package default config:
 
 ```
-php artisan vendor:publish --provider="MartinLindhe\VueInternationalizationGenerator\GeneratorProvider"
+php artisan vendor:publish --provider="EduardoR2K\VueInternationalizationGenerator\GeneratorProvider"
 ```
 
 Then generate the include file with
@@ -98,6 +98,6 @@ Vue template:
 
 ## Notices
 
-The generated file is an ES6 module.
+The generated file is an ES5 module.
 
 [Pluralization](http://laravel.com/docs/5.1/localization#pluralization) don't work with vue-i18n

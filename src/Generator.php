@@ -41,16 +41,26 @@ class Generator
 
         $dir = new DirectoryIterator($path);
         foreach ($dir as $fileinfo) {
-            if (!$fileinfo->isDot()) {
-                $noExt = $this->removeExtension($fileinfo->getFilename());
-                // Ignore non *.php files (ex.: .gitignore, vim swap files etc.)
-                if (pathinfo($fileinfo->getFileName())['extension'] !== 'php') {
-                    continue;
-                }
-                $tmp = include($path . '/' . $fileinfo->getFilename());
 
-                $data[$noExt] = $this->adjustArray($tmp);
+            if ($fileinfo->isDot()) {
+                continue;
             }
+
+            if(is_dir($fileinfo->getPathname()))
+            {
+                $this->allocateLocaleArray($fileinfo->getPathname());
+                continue;
+            }
+
+            $noExt = $this->removeExtension($fileinfo->getFilename());
+
+            // Ignore non *.php files (ex.: .gitignore, vim swap files etc.)
+            if (pathinfo($fileinfo->getFileName())['extension'] !== 'php') {
+                continue;
+            }
+            $tmp = include($path . '/' . $fileinfo->getFilename());
+
+            $data[$noExt] = $this->adjustArray($tmp);
         }
 
         return $data;
